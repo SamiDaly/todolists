@@ -1,13 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>todo-list</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <h1 class="flex flex-col items-center mt-6 text-4xl">To Do List</h1>
+    <div
+      id="listContainer"
+      class="flex flex-col items-center mt-12 p-6 rounded-lg w-full max-w-lg mx-auto min-h-[600px]"
+    >
+      <div id="toDo" class="flex gap-2 mb-4">
+        <input id="textFromUser" type="text" class="bg-white p2 rounded" />
+        <button id="btn" class="text-2xl align-top px-4 py-2 rounded">ADD TASK</button>
+      </div>
+
+      <ul id="list" class="flex-center flex-row"></ul>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
